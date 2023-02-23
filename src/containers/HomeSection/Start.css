@@ -1,0 +1,88 @@
+
+li {
+    list-style-image: url("../../images/dumbbell.png");
+}
+
+.vertical-line1 {
+    height: 1px;
+
+    margin-bottom: 10px;
+    background-color: rgb(255, 255, 255);
+    display: block;
+}
+
+.faq-header {
+    margin: 20px;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1.35rem;
+    border-radius: 5px;
+    cursor: default;
+    color: white;
+    background-color: rgb(255, 0, 0);
+}
+
+.faqs {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.faqs .faq {
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    border: 0px solid black;
+    font-size: 1.10rem;
+    margin: 15px;
+    box-shadow: 0px 0px 5px 2px #97979744;
+    cursor: pointer;
+    padding: 15px; 
+    background-color: #070707d8;
+}
+
+.faqs .faq .faq-question {
+    position: relative;
+    transition: all 0.6s ease;
+}
+
+.faqs .faq .faq-answer {
+    opacity: 0;
+    max-height: 0;
+    overflow-y: hidden;
+    transition: all 0.6s ease;
+}
+.faqs .faq .faq-question::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%) rotate(90deg);
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    background-image: url('../../images/arrow.png');
+    filter: invert(100%);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    transition: all 0.6s ease;
+}
+
+.faqs .faq.open .faq-question {
+    margin-bottom: 6px;
+}
+
+.faqs .faq.open .faq-question::after {
+    transform: translateY(-50%) rotate(270deg);
+}
+
+.faqs .faq.open .faq-answer {
+    max-height: 1000px;
+    opacity: 1;
+}
+.chuj {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+}

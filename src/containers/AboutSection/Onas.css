@@ -1,0 +1,16 @@
+
+.vertical-line {
+    height: 1px;
+    position: absolute;
+    margin-top: -1%;
+    width: 60%;
+    background-color: rgb(0, 0, 0);
+    display: block;
+}
+.white {
+    background-color: white;
+}
+.button1 {
+    margin-top: 150%;
+    font-family: 'Exo 2';
+}
