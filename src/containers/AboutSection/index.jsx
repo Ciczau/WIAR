@@ -38,7 +38,7 @@ const AboutSection = ({windowWidth}) => {
                       )}
                   
                       {choice === 1 && (
-                        <div style={{width: "40%", marginLeft: "30%", marginBottom: "30px",display: "flex",marginTop: "11%",justifyContent: "center", flexDirection: "column", fontSize: "1.2rem"}}>
+                        <div style={{width: "40%", marginLeft: "30%", marginBottom: "30px",display: "flex",marginTop: "11%",justifyContent: "center", flexDirection: "column", fontSize: "1.2rem", backgroundColor: "#33333342", padding: "25px", borderRadius: "3px"}}>
                           <p style={{fontSize: "2.5rem",width: "150%", marginLeft: "-25%"}}>Nazywam się Artur. <br/>Jestem trenerem medycznym/personalnym. 
                           </p><p>Od wielu lat towarzyszy mi trening siłowy pod różne cele. </p>
                           <p style={{marginLeft: "20%", width: "60%"}}>Przez te wiele lat nauczyłem się jak działa nasze ciało, czego tak naprawdę potrzebuje aby być zdrowym ruchowo. </p>
@@ -61,7 +61,7 @@ const AboutSection = ({windowWidth}) => {
                         <div style={{fontWeight: "bold", fontFamily: "'Exo 2'",margin: "10px",fontSize: "2.5vw", transform: hover === 2 && "translateY(-50px)", transition: "0.33s ease"}}>Wiktor Michalski</div>
                       )}
                       {choice === 2 && (
-                       <div style={{width: "40%", position: "relative", marginLeft: "30%", marginBottom: "30px",display: "flex",marginTop: "11%",justifyContent: "center", flexDirection: "column", fontSize: "1.2rem", zIndex: "9"}}>
+                       <div style={{width: "40%", position: "relative", marginLeft: "30%", marginBottom: "30px",display: "flex",marginTop: "11%",justifyContent: "center", flexDirection: "column", fontSize: "1.2rem", zIndex: "9", backgroundColor: "#33333342", padding: "25px", borderRadius: "3px"}}>
                         <p style={{fontSize: "2.5rem",width: "150%", marginLeft: "-25%"}}>Cześć, nazywam się Wiktor</p>
                         <p >Od blisko ośmiu lat trening siłowy jest częścią mojego życia.</p>
                         <p style={{fontSize: "1.4rem", padding: "15px 105px"}}>Praktycznie od początku, największą satysfakcje dawał mi progress siłowy, stąd moje zamiłowanie do trójboju siłowego.
