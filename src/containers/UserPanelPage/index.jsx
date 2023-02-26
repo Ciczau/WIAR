@@ -167,7 +167,7 @@ const UserPanelPage = ({windowWidth, readData, name, role, firstName, surName, e
                                
                             </div>
                             <br/>
-                            Witaj {user.name}
+                            Witaj <b>{user.name}</b>
                             
                             <div style={{fontSize: "1.3rem", marginTop: "100px"}}>
                                 <div onClick={() => setSelected(1)} style={{fontWeight: selected === 1 ? 'bold' : 'normal', cursor: "pointer"}}>Ustawienia</div>
