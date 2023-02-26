@@ -89,9 +89,9 @@ const ContactSection = ({windowWidth}) => {
             <div>
                 <i className="large instagram icon"/>_wvktor_
                 <br/><br/>
-                <i className="large envelope outline icon"/>wiktor.michalski@outlook.com
+                <i className="large envelope outline icon"/>ciczau@outlook.com
                 <br/><br/>
-                <i className="large phone icon"/>6969661323
+                <i className="large discord icon"/>Ciczau#9529
             </div>
             </div> 
                 
@@ -142,9 +142,9 @@ const ContactSection = ({windowWidth}) => {
                 <br/>
                 <i className="large instagram icon"/>_wvktor_ 
                 <br/><br/>
-                <i className="large envelope outline icon"/>wiktor.michalski@outlook.com 
+                <i className="large envelope outline icon"/>ciczau@outlook.com 
                 <br/><br/>
-                 <i className="large phone icon"/>6969661323
+                 <i className="large discord icon"/>Ciczau#9529
                 </div>
             </div>
             </>

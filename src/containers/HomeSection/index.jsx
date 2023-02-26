@@ -47,7 +47,7 @@ const HomeSection = ({windowWidth, choose}) => {
     },
     {
         question: "Czy podczas współpracy jest możliwy stały kontakt z trenerami?",
-        answer: "Tak, kontakt odbywa się w większości drogą mailową, odpisujemy najszybciej jak to jest możliwe jeżeli chodzi o sprawy związane z treningiem. Klienci mogą też pisać do Nas prywatnie innych komunikatorach, jednak w tylko ważnych sprawach. ",
+        answer: "Tak, kontakt odbywa się w większości drogą mailową, odpisujemy najszybciej jak to jest możliwe jeżeli chodzi o sprawy związane z treningiem. Klienci mogą też pisać do nas prywatnie na innych komunikatorach, jednak w tylko ważnych sprawach. ",
         open: false
     },
     {
@@ -96,7 +96,7 @@ const HomeSection = ({windowWidth, choose}) => {
     ];
   
     return (
-        <div><SideBar hide={true}/><ImageSlider images={images} choose={choose}/>
+        <div><ImageSlider images={images} choose={choose}/>
         {windowWidth > 800 ? (
         <>
         
@@ -165,7 +165,7 @@ const HomeSection = ({windowWidth, choose}) => {
         <S.WrapperFAQ>
             <img src={bga} alt="art" width="100%" style={{position: "absolute", display: "flex", justifyContent: "center", zIndex: "-1", marginTop: "-9%", filter: "brightness(30%)"}} />
             <img src={bgw} alt="wik" width="100%" style={{position: "absolute", display: "flex", justifyContent: "center", zIndex: "-1", bottom: "0", filter: "brightness(30%)"}} />
-            <div style={{ color: "black", height: "850px"}}>
+            <div style={{ color: "black", height: "auto"}}>
                 <div className="faqs">
                 <div className="faq-header" style={{marginTop: "10%"}}><b>NAJCZĘŚCIEJ ZADAWANE PYTANIA</b></div>
                         {faqs.map((faq, i) => (

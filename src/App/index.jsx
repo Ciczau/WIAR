@@ -16,6 +16,7 @@ import LogoSection from '../containers/LogoSection';
 import Background from '../components/Background';
 import * as S from './index.styles';
 import LoadingPage from '../containers/LoadingPage';
+import SideBar from '../components/SideBar';
 
 export const App = () => {
     const [playing, setPlaying] = useState(true);
@@ -132,23 +133,10 @@ export const App = () => {
                     
                     <LogoSection readData={readData} name={name}/>
                     <div >
-                        {windowWidth > 800 ? (
-                        <div >
-                        <S.VideoSwitch>
-                            <i className={playing ? 'large pause icon' : 'large play icon'} onClick={playing ?  stopVideo : playVideo} />
-                        </S.VideoSwitch>
-                        
-                        <div style={{display: "flex"}}>
-                        <Header readData={readData} windowWidth={windowWidth}/>
-                            <SocialMedia/>
-                        </div></div>
-                        ) : (
-                        <div>
-                        
-                        <Header readData={readData} windowWidth={windowWidth}/>
-                       </div>
+                        {windowWidth > 800 && (
+                            <SideBar hide={true}/>
                         )}
-               
+                        <Header readData={readData} windowWidth={windowWidth}/>
                         <Route path="/"><HomeSection windowWidth={windowWidth}/></Route>
                         <Route path="/us"><AboutSection windowWidth={windowWidth}/></Route>
                         <Route path="/offer"><OfferSection name={name} email={email} readData={readData} windowWidth={windowWidth}/></Route>

@@ -27,7 +27,7 @@ const SideBar = ({hide}) => {
           
           <i className={hidden ? "grey left angle icon" : "grey right angle icon"} onClick={hiddenClick} style={{position: "absolute", right: "0", zIndex: "3"}}/>
           
-          <div style={{padding: "15px", color: "white", display: "flex",zIndex: "2",fontWeight: "bold", justifyContent: "center",width: "100%",backgroundColor: "#000224",boxShadow: "0px 1px 3px #fcfcfc"}}>
+          <div style={{padding: "15px", color: "white", display: "flex",zIndex: "2",fontWeight: "bold", justifyContent: "center",width: "100%",backgroundColor: "#000225",boxShadow: "0px 1px 3px #fcfcfc"}}>
               AKTUALNOŚCI
           </div>
           <a href="https://www.instagram.com/p/CnWqijLtc9j/" target="_blank"><img src={postartur2} style={{width: "80%", height: "auto", marginLeft: "10%", marginTop: "30px", borderRadius: "5px"}}/></a>

@@ -29,7 +29,7 @@ const AboutSection = ({windowWidth}) => {
         <div>
           {windowWidth > 800 ? (
           <>
-          <SideBar hide={true}/>
+         
             <div style={{backgroundColor: "#222222cf", minHeight: "100vh",height: "auto", width: "100vw",position: 'relative', display: "flex", justifyContent: "center", color: "white", backgroundImage: choice === 2 && `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${wiktor})` || choice === 1 && `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${artur})` , backgroundSize: "cover", backgroundPosition: choice === 2 && "center -350px"}}>
                     <div  style={{marginTop: choice === 0 && "100px", textAlign: "center", position: choice === 2 ? "absolute" : "relative", transform: choice === 2 ? "scale(0.3) translateX(-125vw)" : "scale(1.0)",top: choice === 2 && "-15vw", transition: "0.5s ease", zIndex: choice === 2 && "9996"}}>
                       <S.Image width="50%" onClick={() => setChoice(1)} onMouseEnter={() => setHover(1)} onMouseLeave={() => setHover(0)} src={artur} style={{width: choice === 1 && "0", opacity: choice === 2 && "0.6"}}/>

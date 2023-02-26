@@ -27,7 +27,7 @@ export const MobileWrapper = styled.div`
 export const WrapperFAQ = styled.div`
     font-family: 'Exo 2';
     width: 100vw;
-    
+    display: flex;
     text-align: center;
     position: relative;
     height: auto;

@@ -172,7 +172,7 @@ export const OfferSection = ({name, email, readData, windowWidth}) => {
             )}
         {windowWidth > 800 ? (
         <>
-        <SideBar hide={true}/>
+       
         <S.Wrapper>
             
             <div style={{marginLeft: "0%", width: "50%", display: "flex",justifyContent: "center",alignItems: "center",position: 'sticky'}}>
