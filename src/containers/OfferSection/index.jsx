@@ -138,7 +138,7 @@ export const OfferSection = ({name, email, readData, windowWidth}) => {
         }
         
         try{
-            await axios.post("https://urchin-app-zxtvj.ondigitalocean.app/orders", {user: user.name, email: user.email,  type: serviceType, text: text, period: serviceTime});
+            await axios.post("https://urchin-app-zxtvj.ondigitalocean.app/orders", {user: user.name, email: user.email,  type: serviceType, text: text, period: serviceTime, status: "wait"});
             setSuccess(true);
             setTimeout(() => {
                 setSeen(false);
