@@ -44,8 +44,8 @@ const UserPanelPage = ({windowWidth, readData, name, role, firstName, surName, e
     const Logout = async (e) => {
         e.preventDefault();
         try{
-            console.log(cookie.refreshToken);
-            const response = await axios.post("https://urchin-app-zxtvj.ondigitalocean.app/logout", {refreshToken: cookie.refreshToken});
+            const token = cookie.refreshToken;
+            const response = await axios.post("https://urchin-app-zxtvj.ondigitalocean.app/logout", {refreshToken: token});
             console.log(response);
             if(response.status === 200){
                 removeCookie('refreshToken',{path:'/'});
@@ -217,11 +217,11 @@ const UserPanelPage = ({windowWidth, readData, name, role, firstName, surName, e
                                     <S.LogoutButton style={{marginTop: "60px", fontWeight: "normal" }} onClick={userChange}>Zmień dane</S.LogoutButton>
                                 </div>
                             )}
-                            {selected === 2 && (
-                                <div style={{scrollBehavior: "smooth", overflow: "scroll", height: "500px"}}>
-                                    <div style={{display: "flex", justifyContent: "space-around", fontSize: "1.5rem", width: "100%"}}>
-                                        <div>ID</div>
-                                        <div>Usługa</div>
+                           {selected === 2 && (
+                                <div style={{scrollBehavior: "smooth", overflowY: "scroll", height: "500px"}}>
+                                    <div style={{display: "flex", justifyContent: "space-around",color: "black", fontSize: "1.2rem",fontWeight: "bold",width: "96%",padding: "8px 0px", marginLeft: "2%",borderRadius: "5px",marginTop: "4px", backgroundColor: "#c7c7c7", boxShadow: "0px 0px 5px 3px #00000021"}}>
+                                        <div>Numer</div>
+                                        <div style={{width: "50%"}}>Usługa</div>
                                         <div>Status</div>
                                     </div>
                                     {userOrderList.map((order) => {
@@ -229,13 +229,13 @@ const UserPanelPage = ({windowWidth, readData, name, role, firstName, surName, e
                                         
                                     <div style={{display: "flex", justifyContent: "space-around",color: "black", fontSize: "1.2rem",width: "96%",padding: "3px 0px", marginLeft: "2%",borderRadius: "5px",marginTop: "4px", backgroundColor: "lightgrey", boxShadow: "0px 0px 5px 3px #00000045"}}>
                                         <div>{order._id.slice(-4)}</div>
-                                        <div>{order.type} {order.period}</div>
+                                        <div style={{width: "60%", display: "flex", justifyContent: "center"}}><b>{order.type}</b>&nbsp;{order.period}</div>
                                         <div><i className={"yellow clock icon"}/></div>
                                     </div>
-                                       
-                                        
-                                    )
-                                })}</div>
+                                    )})}
+                                  
+                                
+                             </div>
                             )}
                             {selected === 3 && (
                                 <div>
@@ -338,7 +338,7 @@ const UserPanelPage = ({windowWidth, readData, name, role, firstName, surName, e
                                 {user.role === 'A' && (
                                     <div onClick={() => setSelected(4)} style={{ transform: selected === 4 ? 'scale(1.1)' : 'scale(0.9)', transition: "0.6s ease", color: "red"}}>WIADOMOŚCI</div>
                                 )}
-                                <div onClick={() => setSelected(3)} style={{ transform: selected === 3 ? 'scale(1.1)' : 'scale(0.9)', transition: "0.6s ease"}}>ZMIANA HASŁA</div>
+                                <div onClick={() => setSelected(3)} style={{ transform: selected === 3 ? 'scale(1.1)' : 'scale(0.9)', transition: "0.6s ease"}}>HASŁO</div>
                                 <i className="sign-out icon" onClick={Logout}/>
                             </S.Header>
                         </div>
@@ -372,23 +372,23 @@ const UserPanelPage = ({windowWidth, readData, name, role, firstName, surName, e
                             )}
                             {selected === 2 && (
                                 <div style={{scrollBehavior: "smooth", overflowY: "scroll", height: "500px"}}>
-                                    <div style={{display: "flex", justifyContent: "space-around", fontSize: "1.5rem", width: "100%"}}>
+                                    <div style={{display: "flex", justifyContent: "space-around",color: "black", fontSize: "1.2rem",fontWeight: "bold",width: "96%",padding: "8px 0px", marginLeft: "2%",borderRadius: "5px",marginTop: "4px", backgroundColor: "#c7c7c7", boxShadow: "0px 0px 5px 3px #00000021"}}>
                                         <div>Numer</div>
-                                        <div>Usługa</div>
+                                        <div style={{width: "50%"}}>Usługa</div>
                                         <div>Status</div>
                                     </div>
                                     {userOrderList.map((order) => {
                                     return (
                                         
                                     <div style={{display: "flex", justifyContent: "space-around",color: "black", fontSize: "1.2rem",width: "96%",padding: "3px 0px", marginLeft: "2%",borderRadius: "5px",marginTop: "4px", backgroundColor: "lightgrey", boxShadow: "0px 0px 5px 3px #00000045"}}>
-                                        <div>{order._id}</div>
-                                        <div>{order.type} {order.period}</div>
-                                        <div><i className={order._id === 25 ? "yellow clock icon" : "green circle icon"}/></div>
+                                        <div>{order._id.slice(-4)}</div>
+                                        <div style={{width: "80%", display: "flex", justifyContent: "center"}}><b>{order.type}</b>&nbsp;{order.period}</div>
+                                        <div><i className={"yellow clock icon"}/></div>
                                     </div>
-                                       
-                                        
-                                    )
-                                })}
+                                    )}
+                                    )}
+                                   
+                                
                              </div>
                             )}
                             {selected === 3 && (

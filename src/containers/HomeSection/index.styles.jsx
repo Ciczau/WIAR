@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
     padding: 15px 0;
     height: auto;
     box-shadow: 0px 0px 5px 3px #000000a2;
-    background: linear-gradient(90deg,#000000ce 0%, #000000f9 50%, #ffffffe2 50%, #ffffffc7 100%);
+    background: linear-gradient(90deg,#000000cf 0%, #000000ca 50%, #ffffffe2 50%, #ffffffc7 100%);
     color: white;
 `
 export const MobileWrapper = styled.div`

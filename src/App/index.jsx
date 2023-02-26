@@ -40,7 +40,7 @@ export const App = () => {
     useEffect(() => {
         setTimeout(() => {
             setLoaded(true);
-        }, 1000)
+        },1200)
     }, [])
     useEffect(() => {
         handleScroll();
@@ -122,9 +122,9 @@ export const App = () => {
     return (
         <div >
             
-            {!loaded ? (
+            {!loaded && (
                 <LoadingPage/>
-            ) : (
+            )}
             <div>
                 <Background videoRef={videoRef} windowWidth={windowWidth}/>
                 {!loginPanel && (
@@ -156,7 +156,7 @@ export const App = () => {
                  
                     </div>
                     
-                    <ContactSection windowWidth={windowWidth}/>
+                    <ContactSection windowWidth={windowWidth} onload={() => setLoaded(true)}/>
                     
                     </>
                 )}              
@@ -171,7 +171,6 @@ export const App = () => {
                     </div>
                 )}
                 </div>
-            )}
             </div> 
     );
 };

@@ -128,7 +128,7 @@ const ContactSection = ({windowWidth}) => {
             <div style={{padding: "15px 5px", backgroundColor: "black", color: "white", height: "auto", position: "absolute", width: "100vw"}}>
                 <span style={{backgroundColor: "white", width: "90%",marginLeft: "5%", height: "1px", position: "absolute"}}/>
                 <br/>
-                <div style={{position: 'sticky', width: "50%", float: "left", textAlign: "left", fontSize: "0.9rem"}}>
+                <div style={{position: 'sticky', width: "50%", float: "left", textAlign: "left", fontSize: "0.8rem"}}>
                 <div style={{fontSize: "1.1rem", textAlign: "center"}}>Artur Ziółkowski</div>
                 <br/>
                 <i className="large instagram icon"/>_zielsko_
@@ -137,7 +137,7 @@ const ContactSection = ({windowWidth}) => {
                 <br/><br/>
                 <i className="large phone icon"/>6969661323
                 </div>
-                <div style={{position: 'sticky', width: "50%", float: "right", textAlign: "left", fontSize: "0.9rem"}}>
+                <div style={{position: 'sticky', width: "50%", float: "right", textAlign: "left", fontSize: "0.8rem"}}>
                 <div style={{fontSize: "1.1rem", textAlign: "center"}}>Wiktor Michalski</div>
                 <br/>
                 <i className="large instagram icon"/>_wvktor_ 

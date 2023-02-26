@@ -96,10 +96,10 @@ const HomeSection = ({windowWidth, choose}) => {
     ];
   
     return (
-        <div><ImageSlider images={images} choose={choose}/>
+        <div><SideBar hide={true}/><ImageSlider images={images} choose={choose}/>
         {windowWidth > 800 ? (
         <>
-        <SideBar hide={true}/>
+        
         <S.Wrapper>
             <div style={{width: "50%", position: "relative", float: "left"}}> 
             <div style={{float: "left", marginLeft: "15%", marginTop: "2.05%", width: "70%", position: "relative", height: "100%"}}>

@@ -15,6 +15,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 const AboutSection = ({windowWidth}) => {
     const [placeholder, setPlaceholder] = useState('');
     const [choice, setChoice] = useState(0);
+    const [hover, setHover] = useState(0);
   const string = "Nazywam się Artur. Jestem trenerem medycznym/personalnym. Od wielu lat towarzyszy mi trening siłowy pod różne cele. Przez te wiele lat nauczyłem się jak działa nasze ciało, czego tak naprawdę potrzebuje aby być zdrowym ruchowo. Swoją wiedzę usystematyzowałem na wielu szkoleniach z zakresu treningu siłowego, medycznego oraz programowania planów treningowych. W   podejściu do klienta cel dla mnie jest jeden: Chcę, aby klient trenował zdrowo, optymalnie, bezpiecznie i długofalowo jeżeli tylko nie zabraknie mu zapału. Razem z Wiktorem mamy podobne podejście, że właśnie zdrowo to jest silnie. Stąd nasze zamiłowanie do trójboju i włączaniu elementów z tej dyscypliny nawet w plany, które są kierowane pod osoby trakcie rehabilitacji po kontuzji. Sam wiele lat zmagałem się z kontuzją pleców, potem bólem, który pozostał po tej kontuzji i chcę, aby ludzie zmienili nastawienie, które jest budowane w opinii publicznej, mianowicie: „Jak Cię bolą plecy to ćwiczenia siłowe nie są dla Ciebie”. Do projektu chcę wnieść właśnie ten pierwiastek funkcjonalnego, zdrowego dźwigania, który zabezpieczy ludzi przed ewentualnymi kontuzjami w ciągu codziennego życia, lub podczas uprawiania różnych dyscyplin sportowych."
   const swipeToFirst = useSwipeable({
     onSwipedRight: () => setChoice(2),
@@ -29,11 +30,11 @@ const AboutSection = ({windowWidth}) => {
           {windowWidth > 800 ? (
           <>
           <SideBar hide={true}/>
-            <div style={{backgroundColor: "#222222cf", minHeight: "100vh",height: "auto", width: "100vw",position: 'relative', display: "flex", justifyContent: "center", color: "white", backgroundImage: choice === 2 && `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${wiktor})` || choice === 1 && `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${artur})` , backgroundSize: "cover", backgroundPositionX: "center"}}>
+            <div style={{backgroundColor: "#222222cf", minHeight: "100vh",height: "auto", width: "100vw",position: 'relative', display: "flex", justifyContent: "center", color: "white", backgroundImage: choice === 2 && `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${wiktor})` || choice === 1 && `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${artur})` , backgroundSize: "cover", backgroundPosition: choice === 2 && "center -350px"}}>
                     <div  style={{marginTop: choice === 0 && "100px", textAlign: "center", position: choice === 2 ? "absolute" : "relative", transform: choice === 2 ? "scale(0.3) translateX(-125vw)" : "scale(1.0)",top: choice === 2 && "-15vw", transition: "0.5s ease", zIndex: choice === 2 && "9996"}}>
-                      <S.Image width="50%" onClick={() => setChoice(1)} src={artur} style={{width: choice === 1 && "0", opacity: choice === 2 && "0.6"}}/>
+                      <S.Image width="50%" onClick={() => setChoice(1)} onMouseEnter={() => setHover(1)} onMouseLeave={() => setHover(0)} src={artur} style={{width: choice === 1 && "0", opacity: choice === 2 && "0.6"}}/>
                       {choice === 0 && (
-                        <div style={{backgroundColor: "white", borderRadius: "5px", color: "black", marginLeft: "35%", width: "30%", padding: "10px", top: "15px"}}>Artur</div>
+                        <div style={{fontWeight: "bold",fontFamily: "'Exo 2'", margin: "10px", fontSize: "2.5vw", transform: hover === 1 && "translateY(-50px)", transition: "0.33s ease", fontStretch: "150%"}}>Artur Ziółkowski</div>
                       )}
                   
                       {choice === 1 && (
@@ -55,24 +56,22 @@ const AboutSection = ({windowWidth}) => {
                       
                     </div>
                     <div  style={{marginTop: choice === 0 && "100px", textAlign: "center", position: choice === 1 ? "absolute" : "relative", transform: choice === 1 ? "scale(0.3) translateX(-125vw)" : "scale(1)",top: choice === 1 && "-15vw", transition: "0.5s ease", zIndex: choice === 1 && "9996"}}>
-                      <S.Image width="50%" onClick={() => setChoice(2)} src={wiktor} style={{width: choice === 2 && "0", opacity: choice === 1 && "0.6"}}/>
+                      <S.Image width="50%" onClick={() => setChoice(2)} onMouseEnter={() => setHover(2)} onMouseLeave={() => setHover(0)} src={wiktor} style={{width: choice === 2 && "0", opacity: choice === 1 && "0.6"}}/>
                       {choice === 0 && (
-                        <div>Wiktor</div>
+                        <div style={{fontWeight: "bold", fontFamily: "'Exo 2'",margin: "10px",fontSize: "2.5vw", transform: hover === 2 && "translateY(-50px)", transition: "0.33s ease"}}>Wiktor Michalski</div>
                       )}
                       {choice === 2 && (
                        <div style={{width: "40%", position: "relative", marginLeft: "30%", marginBottom: "30px",display: "flex",marginTop: "11%",justifyContent: "center", flexDirection: "column", fontSize: "1.2rem", zIndex: "9"}}>
-                       <p style={{fontSize: "2.5rem",width: "150%", marginLeft: "-25%"}}>Nazywam się Artur. <br/>Jestem trenerem medycznym/personalnym. 
-                       </p><p>Od wielu lat towarzyszy mi trening siłowy pod różne cele. </p>
-                       <p style={{marginLeft: "20%", width: "60%"}}>Przez te wiele lat nauczyłem się jak działa nasze ciało, czego tak naprawdę potrzebuje aby być zdrowym ruchowo. </p>
-                       <p style={{marginLeft: "20%", width: "60%"}}>Swoją wiedzę usystematyzowałem na wielu szkoleniach z zakresu treningu siłowego, medycznego oraz programowania planów treningowych. 
-                       <br/>W   podejściu do klienta cel dla mnie jest jeden:<br/> 
-                       Chcę, aby klient trenował zdrowo, optymalnie, bezpiecznie i długofalowo jeżeli tylko nie zabraknie mu zapału. </p>
-                       <p>Razem z Wiktorem mamy podobne podejście, że właśnie zdrowo to jest silnie.<br/>  
-                       Stąd nasze zamiłowanie do trójboju i włączaniu elementów z tej dyscypliny nawet w plany, które są kierowane pod osoby trakcie rehabilitacji po kontuzji. 
-                       Sam wiele lat zmagałem się z kontuzją pleców, potem bólem, który pozostał po tej kontuzji i chcę, aby ludzie zmienili nastawienie, 
-                       które jest budowane w opinii publicznej, mianowicie: „Jak Cię bolą plecy to ćwiczenia siłowe nie są dla Ciebie”.</p>
-                       <p>Do projektu chcę wnieść właśnie ten pierwiastek funkcjonalnego, zdrowego dźwigania, 
-                       który zabezpieczy ludzi przed ewentualnymi kontuzjami w ciągu codziennego życia, lub podczas uprawiania różnych dyscyplin sportowych.</p>
+                        <p style={{fontSize: "2.5rem",width: "150%", marginLeft: "-25%"}}>Cześć, nazywam się Wiktor</p>
+                        <p >Od blisko ośmiu lat trening siłowy jest częścią mojego życia.</p>
+                        <p style={{fontSize: "1.4rem", padding: "15px 105px"}}>Praktycznie od początku, największą satysfakcje dawał mi progress siłowy, stąd moje zamiłowanie do trójboju siłowego.
+                        Od wielu lat jestem czynnym zawodnikiem tej dyscypliny, przy okazji udało mi się zdobyć kilka medali.</p>
+                        <p>Dzięki wieloletniemu nabywaniu wiedzy i jej testowaniu jestem w stanie wnieść do projektu między innymi ten stricte trójbojowy aspekt.</p>
+                        <p style={{padding: "0px 80px"}}>W podejściu do klienta patrzę zawsze globalnie, zwracając uwagę na cały tryb życia, tak aby każdy mógł trenować efektywnie i długo.
+                        Dany plan jest układany pod każdego indywidualnie. Ważne jest dla mnie aby każdy mój podopieczny realizował się w zamierzonych sobie celach.</p>
+
+
+
                        </div>
                       )}
                     

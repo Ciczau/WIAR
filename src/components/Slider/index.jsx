@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo} from "react";
-import {FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
+import {FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 const ImageSlider = ({images, choose}) => {
@@ -33,17 +33,17 @@ const ImageSlider = ({images, choose}) => {
         onSwipedRight: () => checkPrev()
     })
     return (
-        <div {...onSwiped} style={{justifyContent: "center",position: "relative", width: "100%", marginTop: "0%", backgroundColor: "black", maxHeight: "100vh"}}>
+        <div {...onSwiped} style={{justifyContent: "center",position: "sticky", width: "100%", marginTop: "0%",height: "auto", backgroundColor: "black", maxHeight: "100vh"}}>
             
             {images.map((image, index) => 
             <motion.div  style={{opacity: index === active ? "1" : "0", width: index === active ? "100%" : "0%", transition: "opacity ease-in-out 0.3s", zIndex: "2",display:"flex", justifyContent: "center", textAlign: "center"}}>
-                <img  src={image.slide} alt="main slide" key={index} style={{filter: "brightness(40%)", overflow: "hidden"}}/>
+                <img  src={image.slide} alt="main slide" key={index} style={{filter: "brightness(40%)", overflow: "hidden", maxHeight: "100vh", width: "100vw",objectFit: "cover", objectPosition: "top center"}}/>
                 <div style={{position: "absolute", zIndex: "3", color: "white", top: "40%",textShadow: "0px 0px 10px #000000d3",width: "50%",height: "auto",lineHeight: "3.5vw", fontSize: "4vw", display: "flex", justifyContent: "center", flexDirection: "column"}}>
                     <div>{image.text}</div>
                     <a href="/offer" style={{fontSize: "2vw",marginTop: "5%",position: "relative",width: "50%",marginLeft: "25%",  backgroundColor: "#660101ff", padding: "2vw",borderRadius: "10px", boxShadow: "0px 0px 5px 3px #0000008f", color: "white"}}>KLIKNIJ TUTAJ</a>
                 </div>
-                <div style={{position: 'absolute', left: "0", bottom: "50%", zIndex: "3", marginLeft: "5vw",  display: "flex"}} onClick={checkPrev}><FaArrowCircleLeft size="3vw" color="white"/></div>
-            <div style={{position: "absolute", right: "0", bottom: "50%",zIndex: "3", marginRight: "5vw",display: "flex"}} onClick={checkNext}><FaArrowCircleRight size="3vw" color="white"/></div>
+                <div style={{position: 'absolute', left: "0", bottom: "50%", zIndex: "3", marginLeft: "5vw",  display: "flex", cursor: "pointer"}} onClick={checkPrev}><FaAngleLeft size="3vw" color="white"/></div>
+            <div style={{position: "absolute", right: "0", bottom: "50%",zIndex: "3", marginRight: "5vw",display: "flex", cursor: "pointer"}} onClick={checkNext}><FaAngleRight size="3vw" color="white"/></div>
             </motion.div>
             )}
             <div style={{position: "absolute", zIndex: "3", justifyContent: "center", width: "100%",display: "flex", bottom: "20px"}}>

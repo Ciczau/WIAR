@@ -172,12 +172,12 @@ export const OfferSection = ({name, email, readData, windowWidth}) => {
             )}
         {windowWidth > 800 ? (
         <>
-        <SideBar hide={false}/>
+        <SideBar hide={true}/>
         <S.Wrapper>
             
-            <div style={{marginLeft: "15%", width: "35%", display: "flex",alignItems: "center",position: 'sticky'}}>
+            <div style={{marginLeft: "0%", width: "50%", display: "flex",justifyContent: "center",alignItems: "center",position: 'sticky'}}>
             <b>
-            <div style={{width: "70%", marginLeft: "15%"}}>
+            <div style={{width: "50%", marginLeft: "25%"}}>
                 <S.OfferWrapper style={{textAlign: "center", backgroundColor: offer === 0 ? "#8b0000" : "white", color: offer === 0 ? "white" : "black"}} onClick={Offer0}>INDYWIDUALNY PLAN TRENINGOWY</S.OfferWrapper>
                 <S.OfferWrapper style={{textAlign: "center", backgroundColor: offer === 1 ? "#8b0000" : "white", color: offer === 1 ? "white" : "black"}} onClick={Offer1}>PROWADZENIE ONLINE</S.OfferWrapper>
                 <S.OfferWrapper style={{textAlign: "center", backgroundColor: offer === 5 ? "#8b0000" : "white", color: offer === 5 ? "white" : "black"}} onClick={Offer5}>PLAN/KONSULTACJA NAPRAWCZA PO URAZIE</S.OfferWrapper>

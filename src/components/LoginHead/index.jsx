@@ -8,8 +8,8 @@ export const LoginHead = ({name, readData}) => {
     const Logout = async (e) => {
         e.preventDefault();
         try{
-            console.log(cookie.refreshToken);
-            const response = await axios.post("https://urchin-app-zxtvj.ondigitalocean.app/logout", {refreshToken: cookie.refreshToken});
+            const token = cookie.refreshToken;
+            const response = await axios.post("https://urchin-app-zxtvj.ondigitalocean.app/logout", {refreshToken: token});
             console.log(response);
             if(response.status === 200){
                 removeCookie('refreshToken',{path:'/'});
