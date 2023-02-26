@@ -49,11 +49,11 @@ const ContactSection = ({windowWidth}) => {
             <div style={{fontSize: "1.2rem", marginTop: "20px"}}>Artur Ziółkowski</div>
             <br/>
             <div>
-                <i className="large instagram icon"/>_zielsko_
+                <i className="large instagram icon"/>_zielskoo_
                 <br/><br/>
                 <i className="large envelope outline icon"/>zielsko911@gmail.com
                 <br/><br/>
-                <i className="large phone icon"/>6969661323
+                <i className="large phone icon"/>790550614
             </div>
             </div>
             <span style={{backgroundColor: "white", width: "1px", height: "270px", marginTop: "15px"}}/>
@@ -135,7 +135,7 @@ const ContactSection = ({windowWidth}) => {
                 <br/><br/>
                 <i className="large envelope outline icon"/>zielsko911@gmail.com
                 <br/><br/>
-                <i className="large phone icon"/>6969661323
+                <i className="large phone icon"/>790550614
                 </div>
                 <div style={{position: 'sticky', width: "50%", float: "right", textAlign: "left", fontSize: "0.8rem"}}>
                 <div style={{fontSize: "1.1rem", textAlign: "center"}}>Wiktor Michalski</div>

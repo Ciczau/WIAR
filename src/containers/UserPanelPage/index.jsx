@@ -170,10 +170,10 @@ const UserPanelPage = ({windowWidth, readData, name, role, firstName, surName, e
                             Witaj {user.name}
                             
                             <div style={{fontSize: "1.3rem", marginTop: "100px"}}>
-                                <div onClick={() => setSelected(1)} style={{fontWeight: selected === 1 ? 'bold' : 'normal'}}>Ustawienia</div>
+                                <div onClick={() => setSelected(1)} style={{fontWeight: selected === 1 ? 'bold' : 'normal', cursor: "pointer"}}>Ustawienia</div>
                                 <br/><br/>
                                 {user.role === 'U' && (
-                                    <div onClick={() => setSelected(2)} style={{fontWeight: selected === 2 ? 'bold' : 'normal'}}>Zamówienia</div>
+                                    <div onClick={() => setSelected(2)} style={{fontWeight: selected === 2 ? 'bold' : 'normal', cursor: "pointer"}}>Zamówienia</div>
                                 )}
                                 {user.role === 'A' && (
                                 <>
@@ -183,7 +183,7 @@ const UserPanelPage = ({windowWidth, readData, name, role, firstName, surName, e
                                 </>
                                 )}
                                 <br/><br/>
-                                <div onClick={() => setSelected(3)} style={{fontWeight: selected === 3 ? 'bold' : 'normal'}}>Zmiana hasła</div>
+                                <div onClick={() => setSelected(3)} style={{fontWeight: selected === 3 ? 'bold' : 'normal',  cursor: "pointer"}}>Zmiana hasła</div>
                                 <br/><br/><br/><br/>
                                <S.LogoutButton style={{marginTop: "120px"}} onClick={Logout}>Wyloguj </S.LogoutButton> 
 
@@ -230,7 +230,7 @@ const UserPanelPage = ({windowWidth, readData, name, role, firstName, surName, e
                                     <div style={{display: "flex", justifyContent: "space-around",color: "black", fontSize: "1.2rem",width: "96%",padding: "3px 0px", marginLeft: "2%",borderRadius: "5px",marginTop: "4px", backgroundColor: "lightgrey", boxShadow: "0px 0px 5px 3px #00000045"}}>
                                         <div>{order._id.slice(-4)}</div>
                                         <div style={{width: "60%", display: "flex", justifyContent: "center"}}><b>{order.type}</b>&nbsp;{order.period}</div>
-                                        <div><i className={order.status === 'wait' ? "yellow clock icon" : "green dot icon"}/></div>
+                                        <div><i className={order.status === 'wait' ? "yellow clock icon" : "green circle icon"}/></div>
                                     </div>
                                     )})}
                                   
@@ -383,7 +383,7 @@ const UserPanelPage = ({windowWidth, readData, name, role, firstName, surName, e
                                     <div style={{display: "flex", justifyContent: "space-around",color: "black", fontSize: "1.2rem",width: "96%",padding: "3px 0px", marginLeft: "2%",borderRadius: "5px",marginTop: "4px", backgroundColor: "lightgrey", boxShadow: "0px 0px 5px 3px #00000045"}}>
                                         <div>{order._id.slice(-4)}</div>
                                         <div style={{width: "80%", display: "flex", justifyContent: "center"}}><b>{order.type}</b>&nbsp;{order.period}</div>
-                                        <div><i className={order.status === 'wait' ? "yellow clock icon" : "green dot icon"}/></div>
+                                        <div><i className={order.status === 'wait' ? "yellow clock icon" : "green circle icon"}/></div>
                                     </div>
                                     )}
                                     )}
