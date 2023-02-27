@@ -17,6 +17,7 @@ import Background from '../components/Background';
 import * as S from './index.styles';
 import LoadingPage from '../containers/LoadingPage';
 import SideBar from '../components/SideBar';
+import CookieAgree from '../components/CookieAgree';
 
 export const App = () => {
     const [playing, setPlaying] = useState(true);
@@ -141,7 +142,7 @@ export const App = () => {
                     </div>
                     
                     <ContactSection windowWidth={windowWidth} onload={() => setLoaded(true)}/>
-                    
+                    <CookieAgree/>
                     </>
                 )}              
                 {loginPanel && !token && (
