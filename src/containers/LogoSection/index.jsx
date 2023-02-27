@@ -5,7 +5,7 @@ import logo from '../../images/logo.png';
 const LogoSection = ({name, readData}) => {
     return (
             <div style={{textAlign: "center", display: "flex",justifyContent: "center", background: window.innerWidth > 800 ? "radial-gradient(circle, rgba(255, 255, 255, 0.158) 7%, rgba(255,255,255,0) 28%, rgba(255,255,255,0) 100%)" : "radial-gradient(circle, rgba(255, 255, 255, 0.158) 50%, rgba(255,255,255,0) 80%, rgba(255,255,255,0) 100%)"}}>
-                <img src={logo} alt="" height={window.innerWidth > 800 ? "100" : "70"}  style={{margin: "5px"}}/> 
+                <a href="/"><img src={logo} alt="" height={window.innerWidth > 800 ? "100" : "70"}  style={{margin: "5px"}}/> </a>
                 {window.innerWidth > 800 && (
                     <LoginHead name={name} readData={readData}/>
                 )}
