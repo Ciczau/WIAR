@@ -10,7 +10,7 @@ export const Footer = styled.footer`
 
     height: 50px;
     color: white;
-    font-size: 1.5vw;
+    font-size: 1.15vw;
     display: flex;
     font-family: 'Exo 2';
     box-shadow: 0px 0px 5px 3px #7a7a7a3b;
