@@ -10,7 +10,6 @@ export const LoginHead = ({name, readData}) => {
         try{
             const token = cookie.refreshToken;
             const response = await axios.post("https://urchin-app-zxtvj.ondigitalocean.app/logout", {refreshToken: token});
-            console.log(response);
             if(response.status === 200){
                 removeCookie('refreshToken',{path:'/'});
             }
@@ -19,7 +18,7 @@ export const LoginHead = ({name, readData}) => {
             }, 500)
             
         }catch(err){
-            console.log(err);
+            console.log("Błąd");
         }
     }
     return (
