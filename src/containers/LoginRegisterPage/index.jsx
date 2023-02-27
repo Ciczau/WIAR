@@ -90,8 +90,8 @@ const LoginRegisterPage = ({readData, windowWidth}) => {
         try{
             const response = await axios.post("https://urchin-app-zxtvj.ondigitalocean.app/login", user);
             let expire = new Date();
-            expire.setTime(expire.getTime() + (response.data.expire));
-            setCookie('refreshToken', response.data.refreshToken, {path: '/', expire});
+            expire.setTime(expire.getTime() + response.data.expire);
+            setCookie('refreshToken', response.data.refreshToken, {path: '/', expires: expire});
             setLogged(true);
             setTimeout(() => {
                 setLogged(false);
