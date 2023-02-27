@@ -37,7 +37,7 @@ const ContactSection = ({windowWidth}) => {
             await axios.post("https://urchin-app-zxtvj.ondigitalocean.app/questions", message);
             setSent(true);
         }catch(err){
-            console.log("Captcha error");
+            setError("Wystąpił błąd");
         }
     }
 

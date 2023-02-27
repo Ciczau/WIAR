@@ -95,7 +95,6 @@ const LoginRegisterPage = ({readData, windowWidth}) => {
             setLogged(true);
             setTimeout(() => {
                 setLogged(false);
-                readData(false);
                 window.location.reload(false);
             }, 1000);
         }catch(err){

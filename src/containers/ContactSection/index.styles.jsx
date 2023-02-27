@@ -19,11 +19,13 @@ export const Input = styled.input`
     padding: 7px;
     font-size: 1.1rem;
     border: 0;
+    outline: 0;
     border-radius: 5px;
   
 `
 export const TextArea = styled.textarea`
     height: 40px;
+    outline: 0;
     padding: 7px;
     font-size: 1.1rem;
     border: 0;
