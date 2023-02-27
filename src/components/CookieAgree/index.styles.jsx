@@ -10,7 +10,7 @@ export const Footer = styled.footer`
 
     height: 50px;
     color: white;
-    font-size: 1.15vw;
+    font-size: 1rem;
     display: flex;
     font-family: 'Exo 2';
     box-shadow: 0px 0px 5px 3px #7a7a7a3b;
@@ -31,8 +31,11 @@ export const Button = styled.button`
     color: white;
 `
 export const ReadMore = styled.u`
-    font-size: 1.3vw;
+    font-size: 1rem;
     margin: 1vw;
+    @media screen and (max-width: 800px) {
+        font-size: 1.3vw;
+    }
 `
 export const MoreWrapper = styled.div`
     position: absolute;
