@@ -36,7 +36,6 @@ export const App = () => {
     const [cookie, setCookies] = useCookies();
     useEffect(() => {
         refreshToken();
-        console.log(loaded);
     },[loaded])
     useEffect(() => {
         setTimeout(() => {
@@ -79,9 +78,7 @@ export const App = () => {
     };
     const refreshToken = async () => {
         try{
-            console.log(cookie.refreshToken)
             const response = await axios.post("https://urchin-app-zxtvj.ondigitalocean.app/token", cookie.refreshToken);
-            console.log(response);
             setToken(response.config.data);
             const decoded = jwtDecode(response.config.data);
             setName(decoded.name);
@@ -116,7 +113,6 @@ export const App = () => {
                 Authorization: `Bearer ${token}`
             }
         });
-        console.log(response.data);
         setUsers(response.data);
     }
 

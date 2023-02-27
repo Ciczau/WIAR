@@ -46,7 +46,6 @@ const UserPanelPage = ({windowWidth, readData, name, role, firstName, surName, e
         try{
             const token = cookie.refreshToken;
             const response = await axios.post("https://urchin-app-zxtvj.ondigitalocean.app/logout", {refreshToken: token});
-            console.log(response);
             if(response.status === 200){
                 removeCookie('refreshToken',{path:'/'});
             }
@@ -55,7 +54,7 @@ const UserPanelPage = ({windowWidth, readData, name, role, firstName, surName, e
             }, 500)
             
         }catch(err){
-            console.log(err);
+            console.log("Błąd");
         }
     }
 
@@ -81,14 +80,13 @@ const UserPanelPage = ({windowWidth, readData, name, role, firstName, surName, e
         }
         
         try{
-            console.log(user);
             const response = await axios.post("https://urchin-app-zxtvj.ondigitalocean.app/change", user);
             setError("Dane zostały zmienione");
             setTimeout(() => {
                 setError("");
             }, 2000);
         }catch(err){
-            console.log(err);
+            setError("Błąd");
         }
     }
     const passwordChange = async e => {
@@ -110,7 +108,6 @@ const UserPanelPage = ({windowWidth, readData, name, role, firstName, surName, e
         
         try{
             const response = await axios.post("https://urchin-app-zxtvj.ondigitalocean.app/changePwd", {name: user.name, oldPwd: oldPassword, newPwd: newPassword});
-            console.log(response);
             setError("Dane zostały zmienione");
             setTimeout(() => {
                 setError("");
