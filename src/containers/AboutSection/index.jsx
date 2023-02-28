@@ -5,8 +5,6 @@ import artur from '../../images/artur.png';
 import wiktor from '../../images/wiktor.JPG';
 import  { motion } from "framer-motion";
 import "./Onas.css";
-import oarturze from "../../images/oarturze.jpg";
-import owiktorze from "../../images/bgw.png";
 import { useSwipeable } from "react-swipeable";
 
 const AboutSection = ({windowWidth}) => {
