@@ -3,14 +3,11 @@ import { BrowserView, MobileView } from "react-device-detect";
 import * as S from './index.styles';
 import artur from '../../images/artur.png';
 import wiktor from '../../images/wiktor.JPG';
-import chuj from '../../images/slide2.jpg';
 import  { motion } from "framer-motion";
 import "./Onas.css";
 import oarturze from "../../images/oarturze.jpg";
 import owiktorze from "../../images/bgw.png";
 import { useSwipeable } from "react-swipeable";
-import SideBar from "../../components/SideBar";
-import ReCAPTCHA from "react-google-recaptcha";
 
 const AboutSection = ({windowWidth}) => {
     const [placeholder, setPlaceholder] = useState('');
@@ -83,16 +80,14 @@ const AboutSection = ({windowWidth}) => {
             ) : (
             <>
               <div style={{minHeight: "100%",width: "100vw", backgroundColor: "black", color: "white"}}>
-                  <motion.div {...swipeToFirst} animate={{width: choice === 0 ? "null" : choice === 1 ? "90%" : "10%"}}  style={{height: "auto",marginTop: "1%", minHeight: "700px", display: "flex", justifyContent: "center",marginBottom:"15px", backgroundImage: `linear-gradient(rgba(0,0,0,0.93), rgba(0,0,0,0.2)),url(${owiktorze})`, backgroundSize: "cover", backgroundPosition: "center",position: "relative", float: "left", width: "50%", borderRadius: "0 15px 15px 0", zIndex: choice === 1 ? "2" : "1", boxShadow: "0px 0px 5px 3px #00000073"}} onClick={() => setChoice(1)}>
+                  <motion.div {...swipeToFirst} animate={{width: choice === 0 ? "null" : choice === 1 ? "90%" : "10%"}}  style={{height: "auto",marginTop: "1%", minHeight: "700px", display: "flex", justifyContent: "center",marginBottom:"15px", backgroundImage: `linear-gradient(rgba(0,0,0,0.93), rgba(0,0,0,0.2)),url(${wiktor})`, backgroundSize: "cover", backgroundPosition: "right center",position: "relative", float: "left", width: "50%", borderRadius: "0 15px 15px 0", zIndex: choice === 1 ? "2" : "1", boxShadow: "0px 0px 5px 3px #00000073"}} onClick={() => setChoice(1)}>
                      {choice === 0 && (
 
                         <div style={{marginTop: "0%", fontSize: "1.6rem"}}>
-                          <div style={{backgroundImage: "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8780889621087314) 38%, rgba(0,0,0,1) 46%, rgba(0,0,0,1) 100%)", width: "100%", position: "absolute", left: "0", textAlign: "center", borderRadius: "0px 15px 0px 0px", padding: "12px 0px 35px 0px", color: "white", fontWeight: "bold"}}>
+                          <div style={{ width: "100%", position: "absolute", left: "0", textAlign: "center", borderRadius: "0px 15px 0px 0px", padding: "12px 0px 35px 0px", color: "white", fontWeight: "bold", fontFamily: "'Exo 2'"}}>
                               Wiktor Michalski
                           </div>
-                          <div className="button1">
-                              <div style={{backgroundColor: "#000000", color: "white", border: "0", padding: "5px 25px", display: "flex", justifyContent: "center", borderRadius: "5px", fontSize: "1rem",fontWeight: "bold", boxShadow: "0px 0px 5px 3px #000000"}}>POKAŻ WIĘCEJ</div>
-                          </div>
+                     
                         </div>  
                      )}
                      {choice === 1 && (
@@ -110,15 +105,13 @@ const AboutSection = ({windowWidth}) => {
                         </>
                      )}
                   </motion.div>
-                  <motion.div {...swipeToSecond }animate={{width: choice === 0 ? "null" : choice === 2 ? "90%" : "10%"}} style={{height: "auto",marginTop: "1%", minHeight: "700px", display: "flex", justifyContent: "center",marginBottom:"15px", backgroundImage: `linear-gradient(rgba(0,0,0,0.93), rgba(0,0,0,0.2)), url(${oarturze})`, backgroundSize: "cover",backgroundPosition: "center",position: "relative", float: "right", width: "50%",  borderRadius: "15px 0 0 15px", zIndex: choice === 2 ? "2" : "1", boxShadow: "-4px 0px 5px 3px #00000085"}} onClick={() => setChoice(2)}>
+                  <motion.div {...swipeToSecond }animate={{width: choice === 0 ? "null" : choice === 2 ? "90%" : "10%"}} style={{height: "auto",marginTop: "1%", minHeight: "700px", display: "flex", justifyContent: "center",marginBottom:"15px", backgroundImage: `linear-gradient(rgba(0,0,0,0.93), rgba(0,0,0,0.2)), url(${artur})`, backgroundSize: "cover",backgroundPosition: "center",position: "relative", float: "right", width: "50%",  borderRadius: "15px 0 0 15px", zIndex: choice === 2 ? "2" : "1", boxShadow: "-4px 0px 5px 3px #00000085"}} onClick={() => setChoice(2)}>
                   {choice === 0 && (
                         <div style={{marginTop: "0%", fontSize: "1.6rem"}}>
-                          <div style={{backgroundImage: "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8780889621087314) 38%, rgba(0,0,0,1) 46%, rgba(0,0,0,1) 100%)", width: "100%", position: "absolute", left: "0", textAlign: "center", borderRadius: "15px 0px 0px 0px", padding: "12px 0px 35px 0px", color: "white", fontWeight: "bold"}}>
+                          <div style={{width: "100%", position: "absolute", left: "0", textAlign: "center", borderRadius: "15px 0px 0px 0px", padding: "12px 0px 35px 0px", color: "white", fontWeight: "bold", fontFamily: "'Exo 2'"}}>
                               Artur Ziółkowski
                           </div>
-                          <div className="button1">
-                              <div style={{backgroundColor: "#000000", color: "white", border: "0", padding: "5px 25px", display: "flex", justifyContent: "center", borderRadius: "5px", fontSize: "1rem",fontWeight: "bold", boxShadow: "0px 0px 5px 3px #000000"}}>POKAŻ WIĘCEJ</div>
-                          </div>
+                        
                         </div>  
                      )}
                     {choice === 2 && (

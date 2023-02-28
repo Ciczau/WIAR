@@ -8,8 +8,10 @@ const Captcha = (props) => {
     const handleSubmit = async (e) => {
     const token = captchaRef.current.getValue();
     try{
-        await axios.post("https://urchin-app-zxtvj.ondigitalocean.app/captcha", {token});
-        props.valid(true);
+        const response = await axios.post("https://urchin-app-zxtvj.ondigitalocean.app/captcha", {token});
+        if(response.status === 200){
+            props.valid(true);
+        }
     }catch(err){
         props.valid(false);
     }

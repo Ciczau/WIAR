@@ -10,14 +10,14 @@
     min-height: 50px;
     padding: 15px 0;   
     box-shadow: 0px 0px 5px 2px #000000bb;
-    font-size: 0.53rem;
+    font-size: 2vw;
     border-radius: 3px;
     font-weight: bold;
     background-color: white;
     
     color: black;
     z-index: 1;
-    background: linear-gradient(45deg, #313131, #8b8b8b, #a5a4a4, #5a5a5a);
+    background: linear-gradient(45deg, #313131, #fafafa, #c7c7c7, #5a5a5a);
 }
 
 .activeSlide {
