@@ -13,6 +13,12 @@ export const Wrapper = styled.footer`
     justify-content: center;
 
 `
+export const Links = styled.a`
+    color: white;
+    &:hover {
+        color: grey;
+    }
+`
 
 export const Input = styled.input`
     height: 30px;

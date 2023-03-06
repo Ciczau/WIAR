@@ -49,7 +49,7 @@ const ContactSection = ({windowWidth}) => {
             <div style={{fontSize: "1.2rem", marginTop: "20px"}}>Artur Ziółkowski</div>
             <br/>
             <div>
-                <i className="large instagram icon"/>_zielskoo_
+                <S.Links href="https://www.instagram.com/_zielskoo_/" target="_blank"><i className="large instagram icon"/>_zielskoo_</S.Links>
                 <br/><br/>
                 <i className="large envelope outline icon"/>zielsko911@gmail.com
                 <br/><br/>
@@ -87,7 +87,7 @@ const ContactSection = ({windowWidth}) => {
             <div style={{fontSize: "1.2rem", marginTop: "20px"}}>Wiktor Michalski</div>
             <br/>
             <div>
-                <i className="large instagram icon"/>_wvktor_
+            <S.Links href="https://www.instagram.com/_wvktor_/" target="_blank"><i className="large instagram icon"/>_wvktor_</S.Links>
                 <br/><br/>
                 <i className="large envelope outline icon"/>ciczau@outlook.com
                 <br/><br/>
@@ -131,7 +131,7 @@ const ContactSection = ({windowWidth}) => {
                 <div style={{position: 'sticky', width: "50%", float: "left", textAlign: "left", fontSize: "0.8rem"}}>
                 <div style={{fontSize: "1.1rem", textAlign: "center"}}>Artur Ziółkowski</div>
                 <br/>
-                <i className="large instagram icon"/>_zielsko_
+                <S.Links href="https://www.instagram.com/_zielskoo_/" target="_blank"><i className="large instagram icon"/>_zielskoo_</S.Links>
                 <br/><br/>
                 <i className="large envelope outline icon"/>zielsko911@gmail.com
                 <br/><br/>
@@ -140,7 +140,7 @@ const ContactSection = ({windowWidth}) => {
                 <div style={{position: 'sticky', width: "50%", float: "right", textAlign: "left", fontSize: "0.8rem"}}>
                 <div style={{fontSize: "1.1rem", textAlign: "center"}}>Wiktor Michalski</div>
                 <br/>
-                <i className="large instagram icon"/>_wvktor_ 
+                <S.Links href="https://www.instagram.com/_wvktor_/" target="_blank"><i className="large instagram icon"/>_wvktor_</S.Links>
                 <br/><br/>
                 <i className="large envelope outline icon"/>ciczau@outlook.com 
                 <br/><br/>
