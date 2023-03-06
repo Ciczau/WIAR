@@ -80,7 +80,7 @@ export const App = () => {
     const refreshToken = async () => {
         try{
             const token = cookie.refreshToken;
-            const response = await axios.post("https://urchin-app-zxtvj.ondigitalocean.app/token", token);
+            const response = await axios.post("https://urchin-app-zxtvj.ondigitalocean.app/token", {refreshToken: token});
             setToken(response.config.data);
             const decoded = jwtDecode(response.config.data);
             setName(decoded.name);
