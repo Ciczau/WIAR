@@ -5,6 +5,7 @@ import * as S from './index.styles';
 const LoadingPage = () => {
     return(
         <S.Wrapper>
+            Strona chwilowo nieczynna
             <ThreeDots
                     height={80}
                     width={80}
@@ -17,6 +18,7 @@ const LoadingPage = () => {
                     strokeWidth={2}
                     strokeWidthSecondary={2}
             />          
+            Wrócimy do was wkrótce!
         </S.Wrapper>
     );
 }

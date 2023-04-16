@@ -38,11 +38,11 @@ export const App = () => {
     useEffect(() => {
         refreshToken();
     },[loaded])
-    useEffect(() => {
+   /* useEffect(() => {
         setTimeout(() => {
             setLoaded(true);
         },1200)
-    }, [])
+    }, [])*/
     useEffect(() => {
         handleScroll();
         window.addEventListener("scroll", handleScroll);
