@@ -30,7 +30,7 @@ export const AnimatedBackground = styled.div`
 
 `
 export const StyledBackground = styled.div`
-  background: linear-gradient(to right, #0c011f 0%, #04101b 100%);
+  background: linear-gradient(to right, #233f5c 0%, #233f5c 100%);
   height: 100vh;
   width: 100vw;
   background-size: 400% 400%;

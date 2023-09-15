@@ -1,12 +1,12 @@
 import React from "react";
-import * as S from './index.styles';
+import * as S from "./index.styles";
 
-const Background = ({windowWidth, videoRef}) => {
-    return (
-                <S.Wrapper>
-                    <S.StyledBackground/>
-                </S.Wrapper>
-    )
-}
+const Background = () => {
+  return (
+    <S.Wrapper>
+      <S.StyledBackground />
+    </S.Wrapper>
+  );
+};
 
 export default Background;
